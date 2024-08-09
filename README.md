@@ -1,6 +1,6 @@
 # Artifacts of the paper "DogeFuzz: A Simple Yet Efficient Grey-box Fuzzer for Smart Contracts."
 
-This repository contains artifacts for the experiments in the paper DogeFuzz: A Simple Yet Efficient Grey-box Fuzzer for Smart Contracts. The `dataset` directory includes 2 benchmarks: Bench72 and Bench500. The other directories are `dogefuzz-results` for processing Dogefuzz-related result files and `Smartian-Artifact` for processing Smartian-related replication studies.
+This repository contains artifacts for the experiments in the paper DogeFuzz: A Simple Yet Efficient Grey-box Fuzzer for Smart Contracts. The `dataset` directory includes two benchmarks: Bench72 and Bench500. The other directories are `dogefuzz-results` for processing Dogefuzz-related result files and `Smartian-Artifact` for processing Smartian-related replication studies.
 
 All commands are executed from inside `dogefuzz-results` directory.
 
@@ -40,7 +40,7 @@ $ poetry run aggregator generate_report_smartian sbes_bench72_4 smartian.bench72
 $ poetry run aggregator generate_report_smartian sbes_bench72_5 smartian.bench72.zip
 ```
 
-## RQ1: How do the DogeFuzz strategies compare in terms of code coverage and bug-finding effectiveness?
+## RQ1: How does the DogeFuzz bug-finding effectiveness compare to state-of-the-art fuzzers for Ethereum?
 
 To generate the coverage graph:
 
@@ -73,8 +73,6 @@ $ poetry run aggregator plot_smartian_b2_bugs_found bug_dogefuzz
 
 $ rm -fR bug_dogefuzz
 ```
-
-## RQ2: How does the DogeFuzz bug-finding effectiveness compare to state-of-the-art fuzzers for Ethereum?
 
 To generate the instruction coverage graph:
 
