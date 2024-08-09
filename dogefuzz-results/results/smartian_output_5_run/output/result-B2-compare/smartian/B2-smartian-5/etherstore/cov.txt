@@ -1,0 +1,9 @@
+00m: 0 Edges, 0 Instrs
+01m: 32 Edges, 460 Instrs
+02m: 32 Edges, 460 Instrs
+03m: 32 Edges, 460 Instrs
+04m: 32 Edges, 460 Instrs
+05m: 32 Edges, 460 Instrs
+06m: 32 Edges, 460 Instrs
+07m: 32 Edges, 460 Instrs
+08m: 33 Edges, 463 Instrs

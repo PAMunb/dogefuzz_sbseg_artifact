@@ -1,0 +1,24 @@
+/home/test/tools/ilf/venv/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 92, in <module>
+    main()
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 58, in main
+    contract_manager = execution.get_contracts()
+  File "/home/test/tools/ilf/go/src/ilf/ilf/execution/execution.py", line 45, in get_contracts
+    return ContractManager(**j)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 24, in __init__
+    self.contract_dict = dict([(name, Contract(**contract, manager=self)) for name, contract in kwargs['contracts'].items()])
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 24, in <listcomp>
+    self.contract_dict = dict([(name, Contract(**contract, manager=self)) for name, contract in kwargs['contracts'].items()])
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 71, in __init__
+    self.insns = [Instruction(**insn, contract=self) for insn in kwargs['insns']]
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 71, in <listcomp>
+    self.insns = [Instruction(**insn, contract=self) for insn in kwargs['insns']]
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/insn.py", line 11, in __init__
+    self.op_name = OP_NAME[self.op]
+KeyError: 79

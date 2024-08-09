@@ -1,0 +1,17 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/airDrop.sol:17:13: Warning: Return value of low-level calls not used.
+            caddress.call(id,from,_tos[i],_value);
+            ^-----------------------------------^
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz airDrop

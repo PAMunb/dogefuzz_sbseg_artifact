@@ -1,0 +1,10 @@
+00m: 0 Edges, 0 Instrs
+01m: 169 Edges, 1819 Instrs
+02m: 169 Edges, 1819 Instrs
+03m: 169 Edges, 1819 Instrs
+04m: 169 Edges, 1819 Instrs
+05m: 169 Edges, 1819 Instrs
+06m: 169 Edges, 1819 Instrs
+07m: 169 Edges, 1819 Instrs
+08m: 178 Edges, 1920 Instrs
+09m: 180 Edges, 1925 Instrs

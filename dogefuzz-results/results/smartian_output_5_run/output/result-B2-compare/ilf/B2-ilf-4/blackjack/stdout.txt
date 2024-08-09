@@ -1,0 +1,26 @@
+/home/test/tools/ilf/venv/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 92, in <module>
+    main()
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 58, in main
+    contract_manager = execution.get_contracts()
+  File "/home/test/tools/ilf/go/src/ilf/ilf/execution/execution.py", line 45, in get_contracts
+    return ContractManager(**j)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 24, in __init__
+    self.contract_dict = dict([(name, Contract(**contract, manager=self)) for name, contract in kwargs['contracts'].items()])
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 24, in <listcomp>
+    self.contract_dict = dict([(name, Contract(**contract, manager=self)) for name, contract in kwargs['contracts'].items()])
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 65, in __init__
+    self.abi = ABI(contract=self, proj_path=self.manager.proj_path, payable=kwargs['payable'], **kwargs['abi'])
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/solidity/abi.py", line 87, in __init__
+    compiled_json = json.load(compiled_json_f)
+  File "/usr/lib/python3.6/json/__init__.py", line 296, in load
+    return loads(fp.read(),
+  File "/usr/lib/python3.6/encodings/ascii.py", line 26, in decode
+    return codecs.ascii_decode(input, self.errors)[0]
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xd0 in position 62856: ordinal not in range(128)

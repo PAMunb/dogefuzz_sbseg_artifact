@@ -1,0 +1,12 @@
+00m: 0 Edges, 0 Instrs
+01m: 54 Edges, 686 Instrs
+02m: 54 Edges, 686 Instrs
+03m: 54 Edges, 686 Instrs
+04m: 54 Edges, 686 Instrs
+05m: 54 Edges, 686 Instrs
+06m: 54 Edges, 686 Instrs
+07m: 54 Edges, 686 Instrs
+08m: 54 Edges, 686 Instrs
+09m: 54 Edges, 686 Instrs
+10m: 54 Edges, 686 Instrs
+11m: 54 Edges, 686 Instrs

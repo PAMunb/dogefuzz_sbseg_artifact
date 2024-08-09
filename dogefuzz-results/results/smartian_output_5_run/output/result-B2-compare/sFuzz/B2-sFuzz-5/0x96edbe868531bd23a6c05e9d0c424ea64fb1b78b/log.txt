@@ -1,0 +1,4 @@
+[00:00:00:00] Found BlockstateDependency at 0
+[00:00:00:05] Found MishandledException at 0
+[00:00:00:38] Found IntegerBug at 23b
+[00:00:00:38] Found IntegerBug at 244

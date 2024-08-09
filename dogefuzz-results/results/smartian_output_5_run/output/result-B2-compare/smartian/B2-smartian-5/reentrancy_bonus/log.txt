@@ -1,0 +1,360 @@
+[00:00:00:00] Fuzz target : /home/test/benchmarks/B2/bin/reentrancy_bonus.bin
+[00:00:00:00] Fuzzing starts at 11:45:43
+[00:00:00:00] Time limit : 3600 s
+[DEBUG] Analyzing constructor @ 0
+Found codecopy(<0x0, { }, { }>, _, _), arg# = 0
+constructor: Def = {  }, Use = {  }
+Constructor tainted: {  }
+[DEBUG] Analyzing getFirstWithdrawalBonus(7d1c54f8) @ 4e
+Found sload(<T, { Sha(*, 0x1) }, { }>) @ 0x117
+Found sload(<T, { Sha(*, 0x2) }, { }>) @ 0x173
+Found sstore(<T, { Sha(*, 0x2) }, { }>, <T, { }, { map_2 }>) @ 0x17a
+Found sload(<T, { Sha(*, 0x2) }, { }>) @ 0x221
+Found sstore(<T, { Sha(*, 0x2) }, { }>, <0x0, { }, { }>) @ 0x267
+Found sload(<T, { Sha(*, 0x1) }, { }>) @ 0x1cc
+Found sstore(<T, { Sha(*, 0x1) }, { }>, <T, { }, { map_1 }>) @ 0x1da
+getFirstWithdrawalBonus(7d1c54f8): Def = { map_1, map_2 }, Use = { map_1, map_2 }
+[DEBUG] Analyzing withdrawReward(b86e321c) @ 91
+Found sload(<T, { Sha(*, 0x2) }, { }>) @ 0x221
+Found sstore(<T, { Sha(*, 0x2) }, { }>, <0x0, { }, { }>) @ 0x267
+withdrawReward(b86e321c): Def = { map_2 }, Use = { map_2 }
+[DEBUG] Analyzing fallback @ 0
+fallback: Def = {  }, Use = {  }
+Pruning out ["withdrawReward(b86e321c)"]
+(3 candidate sequences)
+["getFirstWithdrawalBonus(7d1c54f8)"; "withdrawReward(b86e321c)";
+ "withdrawReward(b86e321c)"]
+["getFirstWithdrawalBonus(7d1c54f8)"; "withdrawReward(b86e321c)";
+ "getFirstWithdrawalBonus(7d1c54f8)"]
+["getFirstWithdrawalBonus(7d1c54f8)"; "getFirstWithdrawalBonus(7d1c54f8)"]
+[00:00:00:00] Start main fuzzing phase
+[00:00:00:00] [*] Save new seed id-00000_00000: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 2    ) Function: withdrawReward(b86e321c), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 3    ) Function: withdrawReward(b86e321c), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+
+[00:00:00:01] Tx#2 found ReentrancyMythril at 296
+[00:00:00:01] [*] Save bug seed id-00000-RE_myth_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: withdrawReward(b86e321c), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 2    ) Function: withdrawReward(b86e321c), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 33B808A5AE24C410E8739B5CA2D5EF3931D3E09F
+(    TX 3    ) Function: withdrawReward(b86e321c), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000001100000000000000000000004F00000040
+
+[00:00:00:01] [*] Save new seed id-00001_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: fallback, From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000007F00000000000000000000004100
+(    TX 2    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 3    ) Function: fallback, From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00002_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: withdrawReward(b86e321c), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 6B773032D99FB9AAD6FC267651C446FA7F9301AF
+(    TX 2    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 00000000000000000000A6000000000000000000
+
+[00:00:00:01] Tx#1 found ReentrancyManticore at 267
+[00:00:00:01] [*] Save bug seed id-00001-RE_mant_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: withdrawReward(b86e321c), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 226CC61B3EAC93CC2CC9D6CB8D61856670D50FAD
+(    TX 2    ) Function: withdrawReward(b86e321c), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 3    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 4    ) Function: withdrawReward(b86e321c), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 5    ) Function: fallback, From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00003_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: fallback, From: NormalUser2, UseAgent: true
+          Value : uint256
+                 000000000000000000000000000000000000000000000000000000400000E010
+(    TX 2    ) Function: withdrawReward(b86e321c), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 118A2C24808934116E6AB4C00FF48145D23B09E1
+( => TX 3 <= ) Function: fallback, From: NormalUser2, UseAgent: false
+          Value : uint256
+                 8000000000000000000000000000000000000000000000000000000000000001
+(    TX 4    ) Function: withdrawReward(b86e321c), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 41B808A5AE24C410E8739B5CA2D5EF3931D3E09F
+(    TX 5    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 00AB00000000000000000000003D000000000000
+(    TX 6    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000100000000000000000000000000000
+
+[00:00:00:11] Tx#4 found ReentrancyManticore at 1da
+[00:00:00:11] [*] Save bug seed id-00002-RE_mant_00011: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: withdrawReward(b86e321c), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 00000000000000000000EE000000000041000000
+(    TX 2    ) Function: withdrawReward(b86e321c), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 24CD2EDBA056B7C654A50E8201B619D4F624FDDA
+(    TX 3    ) Function: fallback, From: NormalUser2, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000E800000000000000
+( => TX 4 <= ) Function: getFirstWithdrawalBonus(7d1c54f8), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 33B808A5AE24C410E8739B5CA2D5EF3931D3E09F
+(    TX 5    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 33B808FFAE24C410E8739B5CA2D5813931F2E09F
+
+[00:00:00:20] [*] Save new seed id-00004_00020: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: fallback, From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000F10000000000000000000000000000000000E60000000000000000
+(    TX 2    ) Function: fallback, From: NormalUser3, UseAgent: false
+          Value : uint256
+                 8000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: fallback, From: NormalUser3, UseAgent: false
+          Value : uint256
+                 00000000000000000000000000000000000000000000000081000000003F0000
+(    TX 4    ) Function: withdrawReward(b86e321c), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 33B808A5AE24C410E8739B5CA2D5EF3931D3E09F
+(    TX 5    ) Function: withdrawReward(b86e321c), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000100000000
+(    TX 6    ) Function: withdrawReward(b86e321c), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 00000000000000000000000000E27F0000000800
+(    TX 7    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 8    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 10000000000000000000000000009C0000000000
+(    TX 9    ) Function: fallback, From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000400000000000000000000000000000000000
+(    TX 10    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 11    ) Function: withdrawReward(b86e321c), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+
+[00:00:01:29] Tx#4 found Reentrancy at 1da
+[00:00:01:29] Tx#4 found ReentrancySFuzz at 296
+[00:00:01:29] Tx#4 found ReentrancyManticore at 17a
+[00:00:01:29] [*] Save bug seed id-00003-RE-RE_mant-RE_sfuzz_00089: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: fallback, From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000008000000000
+(    TX 2    ) Function: fallback, From: NormalUser1, UseAgent: false
+          Value : uint256
+                 8000B40000000000000000000000007F000000000000FB000000000000000001
+(    TX 3    ) Function: withdrawReward(b86e321c), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 4    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 24CD2EDBA056B7C654A50E8201B619D4F624FDDA
+(    TX 5    ) Function: withdrawReward(b86e321c), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 000000000400000000000000000000000000001E
+( => TX 6 <= ) Function: fallback, From: NormalUser1, UseAgent: false
+          Value : uint256
+                 FFFFFFFFFF80FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFF
+
+[00:00:02:47] Tx#10 found EtherLeak at 296
+[00:00:02:47] [*] Save bug seed id-00004-EL_00167: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: fallback, From: NormalUser3, UseAgent: false
+          Value : uint256
+                 4000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 3    ) Function: fallback, From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000EA0000
+(    TX 4    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 5    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 00000000006C000000000000000000EA570000E1
+(    TX 6    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000041000000000016001400005200
+(    TX 7    ) Function: withdrawReward(b86e321c), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 226CC61B3EAC93CC2CC9D6CB8D61856670D50FAD
+(    TX 8    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 0000000000000000000000000000000000000000
+(    TX 9    ) Function: withdrawReward(b86e321c), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 33B80880AE24C410E8739B5CC0D5EF3931D3E09F
+(    TX 10    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 118A2C24808934116E6AB4C00FF48145D23B09E1
+(    TX 11    ) Function: withdrawReward(b86e321c), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 118A2C5F808934116E6AB4C00FF48145D23B09E1
+(    TX 12    ) Function: getFirstWithdrawalBonus(7d1c54f8), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : address
+                 226CC61B3EAC93412CC9D6CB8D61856670B30FAD
+
+Fuzzing timeout expired.
+[00:01:00:00] ===== Statistics =====
+[00:01:00:00] Total Executions: 2084109
+[00:01:00:00] Deployment failures: 0
+[00:01:00:00] Test Cases: 5
+[00:01:00:00] Covered Edges: 19
+[00:01:00:00] Covered Instructions: 309
+[00:01:00:00] Covered Def-Use Chains: 440072
+[00:01:00:00] Found Bugs:
+[00:01:00:00]   Assertion Failure: 0
+[00:01:00:00]   Arbitrary Write: 0
+[00:01:00:00]   Block state Dependency: 0
+[00:01:00:00]   Control Hijack: 0
+[00:01:00:00]   Ether Leak: 1
+[00:01:00:00]   Integer Bug: 0
+[00:01:00:00]   Mishandled Exception: 0
+[00:01:00:00]   Multiple Send: 0
+[00:01:00:00]   Reentrancy: 1
+[00:01:00:00]   Suicidal Contract: 0
+[00:01:00:00]   Transaction Origin Use: 0
+[00:01:00:00]   Freezing Ether: 0
+[00:01:00:00]   Requirement Violation: 0
+[00:01:00:00] Done, clean up and exit...

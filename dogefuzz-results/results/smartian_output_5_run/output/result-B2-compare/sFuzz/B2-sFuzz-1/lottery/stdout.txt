@@ -1,0 +1,50 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/Lottery.sol:24:6: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+     function Lottery() {
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lottery.sol:30:10: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         throw;
+         ^---^
+contracts/Lottery.sol:48:18: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                 throw;
+                 ^---^
+contracts/Lottery.sol:55:40: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         if(msg.sender != organizer) { throw; }
+                                       ^---^
+contracts/Lottery.sol:64:40: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+         if(msg.sender != organizer) { throw; }
+                                       ^---^
+contracts/Lottery.sol:58:14: Warning: Invoking events without "emit" prefix is deprecated.
+             GetBet(bets[i].betAmount, bets[i].blockNumber, bets[i].won);
+             ^---------------------------------------------------------^
+contracts/Lottery.sol:66:10: Warning: "suicide" has been deprecated in favour of "selfdestruct"
+         suicide(organizer);
+         ^----------------^
+contracts/Lottery.sol:24:6: Warning: No visibility specified. Defaulting to "public". 
+     function Lottery() {
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lottery.sol:29:6: Warning: No visibility specified. Defaulting to "public". 
+     function() {
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lottery.sol:34:6: Warning: No visibility specified. Defaulting to "public". 
+     function makeBet() payable {
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lottery.sol:54:6: Warning: No visibility specified. Defaulting to "public". 
+     function getBets() {
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lottery.sol:63:6: Warning: No visibility specified. Defaulting to "public". 
+     function destroy() {
+     ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz Lottery

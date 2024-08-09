@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "aggregator"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+authors = ["dogefuzz <dogefuzz@dogefuzz.org>"]
+packages = [{include = "aggregator"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fire = "^0.5.0"
+gdown = "^4.7.1"
+matplotlib = "^3.7.1"
+mplcursors = "^0.5.3"
+numpy = "^1.24.3"
+scikit-learn = "^1.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+aggregator = "aggregator:main"

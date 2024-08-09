@@ -1,0 +1,14 @@
+panic: error reading truffle build directory /home/test/ilf-workspace/proj/build/contracts/: open /home/test/ilf-workspace/proj/build/contracts/: no such file or directory
+
+goroutine 17 [running, locked to thread]:
+ilf/execution.(*Backend).readDeployedBytecodes(0xc420056900, 0xc420199d00)
+	/home/test/tools/ilf/go/src/ilf/execution/backend.go:216 +0x500
+ilf/execution.(*Backend).DeployContracts(0xc420056900, 0xc420056900, 0x0, 0x0)
+	/home/test/tools/ilf/go/src/ilf/execution/backend.go:89 +0xa3
+ilf/execution.NewBackend(0xc42011da40, 0x1d, 0x1d, 0x7f308b00f82e, 0xc, 0x17)
+	/home/test/tools/ilf/go/src/ilf/execution/backend.go:77 +0x314
+main.SetBackend(0x7f308b623fd0, 0x7f308b3ec628)
+	/home/test/tools/ilf/go/src/ilf/export/execution.go:17 +0x4c
+main._cgoexpwrap_962cb359037a_SetBackend(0x7f308b623fd0, 0x0)
+	_cgo_gotypes.go:71 +0x5c
+timeout: the monitored command dumped core

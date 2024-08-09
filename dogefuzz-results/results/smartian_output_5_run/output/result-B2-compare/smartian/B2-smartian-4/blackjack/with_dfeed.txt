@@ -1,0 +1,53 @@
+[00:00:00:00] Start replaying test cases in : /home/test/output/testcase
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00000_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00002_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00001_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00006_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00003_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00005_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00010_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00004_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00008_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00009_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00007_00002
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00011_00007
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00013_00008
+[00:00:00:00] Tx#3 found BlockstateDependency at 23f2
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00012_00008
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00014_00008
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00015_00011
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00016_00012
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00018_00013
+[00:00:00:00] Tx#3 found BlockstateDependency at 24b0
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00017_00013
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00022_00022
+[00:00:00:00] Tx#2 found BlockstateDependency at 207a
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00019_00022
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00023_00022
+[00:00:00:00] Tx#3 found BlockstateDependency at 2309
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00024_00022
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00020_00022
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00021_00022
+[00:00:00:00] Tx#2 found BlockstateDependency at 202e
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00025_00024
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00026_00025
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00027_00027
+[00:00:00:00] Tx#4 found AssertionFailure at 1aff
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00028_00028
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00029_00031
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00030_00032
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00031_00033
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00032_00037
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00033_00046
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00034_00046
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00035_00049
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00036_00087
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00037_00088
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00038_00144
+[00:00:00:00] Tx#5 found AssertionFailure at 10f5
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00039_00201
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00040_00566
+[00:00:00:00] Replaying test case: /home/test/output/testcase/id-00041_00938
+[00:00:00:00] Covered Edges : 305
+[00:00:00:00] Covered Instructions: 5397
+[00:00:00:00] Elapsed time (ms): 820.3103

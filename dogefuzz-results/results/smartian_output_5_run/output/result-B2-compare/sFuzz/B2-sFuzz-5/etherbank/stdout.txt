@@ -1,0 +1,26 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/EtherBank.sol:21:55: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+		if (!(msg.sender.call.value(amountToWithdraw)())) { throw; }
+		                                                    ^---^
+contracts/EtherBank.sol:10:5: Warning: No visibility specified. Defaulting to "public". 
+    function getBalance(address user) constant returns(uint) {  
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/EtherBank.sol:14:2: Warning: No visibility specified. Defaulting to "public". 
+	function addToBalance() payable {
+ ^ (Relevant source part starts here and spans across multiple lines).
+contracts/EtherBank.sol:18:2: Warning: No visibility specified. Defaulting to "public". 
+	function withdrawBalance() {  
+ ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz EtherBank

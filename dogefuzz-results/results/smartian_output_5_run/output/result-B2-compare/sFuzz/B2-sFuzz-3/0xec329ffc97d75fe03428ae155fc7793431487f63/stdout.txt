@@ -1,0 +1,65 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/TokenSender.sol:10:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function Owned() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:53:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TokenSender(address _token) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:69:21: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if (next>0) throw;
+                    ^---^
+contracts/TokenSender.sol:96:77: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+        if ((mNext == 0 ) && ( token.balanceOf(this) != totalToDistribute)) throw;
+                                                                            ^---^
+contracts/TokenSender.sol:102:69: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                if (!token.transfer(addr, transfers[mNext].amount)) throw;
+                                                                    ^---^
+contracts/TokenSender.sol:126:5: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+    function gas() internal constant returns (uint _gas) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:30:9: Warning: Return value of low-level calls not used.
+        _dst.call.value(_value)(_data);
+        ^----------------------------^
+contracts/TokenSender.sol:10:5: Warning: No visibility specified. Defaulting to "public". 
+    function Owned() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:21:5: Warning: No visibility specified. Defaulting to "public". 
+    function changeOwner(address _newOwner) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:28:5: Warning: No visibility specified. Defaulting to "public". 
+    function execute(address _dst, uint _value, bytes _data) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:35:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address, uint) returns(bool);
+    ^---------------------------------------------^
+contracts/TokenSender.sol:36:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address) constant returns (uint);
+    ^--------------------------------------------------^
+contracts/TokenSender.sol:53:5: Warning: No visibility specified. Defaulting to "public". 
+    function TokenSender(address _token) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:66:5: Warning: No visibility specified. Defaulting to "public". 
+    function fill(uint[] data) onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:87:5: Warning: No visibility specified. Defaulting to "public". 
+    function run() onlyOwner {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:116:5: Warning: No visibility specified. Defaulting to "public". 
+    function hasTerminated() constant returns (bool) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenSender.sol:122:5: Warning: No visibility specified. Defaulting to "public". 
+    function nTransfers() constant returns (uint) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz TokenSender

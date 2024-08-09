@@ -1,0 +1,1384 @@
+[00:00:00:00] Fuzz target : /home/test/benchmarks/B2/bin/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.bin
+[00:00:00:00] Fuzzing starts at 12:58:08
+[00:00:00:00] Time limit : 3600 s
+[DEBUG] Analyzing constructor @ 0
+Found sload(<0x0, { }, { }>) @ 0xf
+Found sstore(<0x0, { }, { }>, <T, { }, { var_0 }>) @ 0x44
+Found sload(<0x2, { }, { }>) @ 0x64
+Found sstore(<0x2, { }, { }>, <T, { }, { var_2 }>) @ 0x99
+Found sload(<0x3, { }, { }>) @ 0xb9
+Found sstore(<0x3, { }, { }>, <T, { }, { var_3 }>) @ 0xee
+Found sload(<0x7, { }, { }>) @ 0x141
+Found sstore(<0x7, { }, { }>, <0x2, { }, { }>) @ 0x144
+Found sstore(<T, { Sha(0x7) }, { }>, <0x0, { }, { }>) @ 0x1a9
+Found sstore(<T, { Sha(0x7) }, { }>, <0x38BBC123, { }, { }>) @ 0x173
+Found codecopy(<0x0, { }, { }>, _, _), arg# = 0
+constructor: Def = { arr_7, var_0, var_2, var_3, var_7 }, Use = { var_0, var_2, var_3, var_7 }
+Constructor tainted: {  }
+[DEBUG] Analyzing callFirstTarget(066d4701) @ 135
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0x575
+Found sload(<0x2, { }, { }>) @ 0x5a6
+callFirstTarget(066d4701): Def = {  }, Use = { map_5, var_2 }
+[DEBUG] Analyzing callSecondTarget(1d263b53) @ 13f
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0x634
+Found sload(<0x3, { }, { }>) @ 0x665
+callSecondTarget(1d263b53): Def = {  }, Use = { map_5, var_3 }
+[DEBUG] Analyzing setSeed(1d7915ad) @ 149
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0x6f3
+Found sload(<0x7, { }, { }>) @ 0x70e
+Found sstore(<T, { Sha(0x7) }, { }>, <T, { }, { }>) @ 0x725
+setSeed(1d7915ad): Def = { arr_7 }, Use = { map_5, var_7 }
+[DEBUG] Analyzing DranMe(2a8de0ca) @ 173
+Found sload(<0x1, { }, { }>) @ 0x735
+Found sstore(<0x1, { }, { }>, <T, { }, { CALLER, var_1 }>) @ 0x76a
+DranMe(2a8de0ca): Def = { var_1 }, Use = { var_1 }
+[DEBUG] Analyzing checkSecret(2fdfd2ae) @ 17d
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0x7b2
+Found sload(<0x6, { }, { }>) @ 0x7e0
+checkSecret(2fdfd2ae): Def = {  }, Use = { map_5, var_6 }
+[DEBUG] Analyzing setSecret(3b4dbf8b) @ 19f
+Found sload(<0x1, { }, { }>) @ 0x7fa
+Found sstore(<0x6, { }, { }>, <T, { }, { }>) @ 0x856
+setSecret(3b4dbf8b): Def = { var_6 }, Use = { var_1 }
+[DEBUG] Analyzing balance(47bb89f0) @ 1bf
+Found sload(<0x08, { }, { }>) @ 0x85f
+Found sload(<T, { Sha(0x08) }, { }>) @ 0x87a
+balance(47bb89f0): Def = {  }, Use = { arr_8, var_8 }
+[DEBUG] Analyzing becomePlayer(56075a98) @ 200
+Found sload(<0x4, { }, { }>) @ 0x89c
+Found sstore(<0x4, { }, { }>, <T, { }, { var_4 }>) @ 0x8a0
+Found sload(<T, { Sha(0x4) }, { var_4 }>) @ 0x8c2
+Found sstore(<T, { Sha(0x4) }, { var_4 }>, <T, { }, { CALLER, arr_4 }>) @ 0x8f7
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0x942
+Found sstore(<T, { Sha(*, 0x5) }, { }>, <T, { }, { map_5 }>) @ 0x950
+becomePlayer(56075a98): Def = { arr_4, map_5, var_4 }, Use = { arr_4, map_5, var_4 }
+[DEBUG] Analyzing manipulateSecret(59eca3e2) @ 20a
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0x998
+Found sload(<0x1, { }, { }>) @ 0x9c9
+Found sload(<0x0, { }, { }>) @ 0xe95
+Found sstore(<0x0, { }, { }>, <T, { }, { CALLER, var_0 }>) @ 0xeca
+manipulateSecret(59eca3e2): Def = { var_0 }, Use = { map_5, var_0, var_1 }
+[DEBUG] Analyzing claimPrize(70740ac9) @ 214
+Found sload(<0x0, { }, { }>) @ 0xa7d
+Found sload(<0x0, { }, { }>) @ 0xad8
+claimPrize(70740ac9): Def = {  }, Use = { var_0 }
+[DEBUG] Analyzing owner(8da5cb5b) @ 21e
+Found sload(<0x1, { }, { }>) @ 0xb5a
+owner(8da5cb5b): Def = {  }, Use = { var_1 }
+[DEBUG] Analyzing seed(95564837) @ 275
+Found sload(<0x7, { }, { }>) @ 0xb7f
+Found sload(<T, { Sha(0x7) }, { }>) @ 0xb9a
+seed(95564837): Def = {  }, Use = { arr_7, var_7 }
+[DEBUG] Analyzing secondTarget(9e3b9dc1) @ 2b6
+Found sload(<0x3, { }, { }>) @ 0xba3
+secondTarget(9e3b9dc1): Def = {  }, Use = { var_3 }
+[DEBUG] Analyzing winPrize(b11cc099) @ 30d
+Found sload(<0x1, { }, { }>) @ 0xbc9
+Found sload(<0x1, { }, { }>) @ 0xc25
+winPrize(b11cc099): Def = {  }, Use = { var_1 }
+[DEBUG] Analyzing guessSeed(bced9cfd) @ 317
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0xcb6
+Found sload(<0x7, { }, { }>) @ 0xcd1
+Found sload(<T, { Sha(0x7) + 0x1 }, { }>) @ 0xce6
+Found sload(<0x7, { }, { }>) @ 0xcec
+Found sload(<T, { Sha(0x7) }, { }>) @ 0xd01
+guessSeed(bced9cfd): Def = {  }, Use = { arr_7, arr_7.off_1, map_5, var_7 }
+[DEBUG] Analyzing getLength(be1c766b) @ 34b
+Found sload(<0x7, { }, { }>) @ 0xd1a
+getLength(be1c766b): Def = {  }, Use = { var_7 }
+[DEBUG] Analyzing getPlayerCount(c2e52206) @ 376
+Found sload(<0x4, { }, { }>) @ 0xd27
+getPlayerCount(c2e52206): Def = {  }, Use = { var_4 }
+[DEBUG] Analyzing getPrize(c34f6b0d) @ 3a1
+getPrize(c34f6b0d): Def = {  }, Use = {  }
+[DEBUG] Analyzing secret(d1efd30d) @ 3cc
+Found sload(<0x6, { }, { }>) @ 0xd50
+secret(d1efd30d): Def = {  }, Use = { var_6 }
+[DEBUG] Analyzing winner(dfbf53ae) @ 3f7
+Found sload(<0x0, { }, { }>) @ 0xd58
+winner(dfbf53ae): Def = {  }, Use = { var_0 }
+[DEBUG] Analyzing firstTarget(f5db9820) @ 44e
+Found sload(<0x2, { }, { }>) @ 0xd7e
+firstTarget(f5db9820): Def = {  }, Use = { var_2 }
+[DEBUG] Analyzing addSeed(f6fc8160) @ 4a5
+Found sload(<T, { Sha(*, 0x5) }, { }>) @ 0xde1
+Found sload(<0x7, { }, { }>) @ 0xee0
+Found sstore(<0x7, { }, { }>, <T, { }, { }>) @ 0xee3
+Found sstore(<T, { Sha(0x7) }, { }>, <0x0, { }, { }>) @ 0xf1f
+addSeed(f6fc8160): Def = { arr_7, var_7 }, Use = { map_5, var_7 }
+[DEBUG] Analyzing players(f71d96cb) @ 4c5
+Found sload(<0x4, { }, { }>) @ 0xe0d
+Found sload(<T, { Sha(0x4) }, { }>) @ 0xe26
+players(f71d96cb): Def = {  }, Use = { arr_4, var_4 }
+[DEBUG] Analyzing fallback @ 0
+fallback: Def = {  }, Use = {  }
+Pruning out ["manipulateSecret(59eca3e2)"]
+Pruning out ["setSecret(3b4dbf8b)"]
+Pruning out ["addSeed(f6fc8160)"]
+(24 candidate sequences)
+["becomePlayer(56075a98)"; "setSeed(1d7915ad)"]
+["becomePlayer(56075a98)"; "players(f71d96cb)"]
+["becomePlayer(56075a98)"; "manipulateSecret(59eca3e2)"]
+["becomePlayer(56075a98)"; "guessSeed(bced9cfd)"]
+["becomePlayer(56075a98)"; "getPlayerCount(c2e52206)"]
+["becomePlayer(56075a98)"; "checkSecret(2fdfd2ae)"]
+["becomePlayer(56075a98)"; "callSecondTarget(1d263b53)"]
+["becomePlayer(56075a98)"; "callFirstTarget(066d4701)"]
+["becomePlayer(56075a98)"; "becomePlayer(56075a98)"]
+["becomePlayer(56075a98)"; "addSeed(f6fc8160)"; "setSeed(1d7915ad)"]
+["becomePlayer(56075a98)"; "addSeed(f6fc8160)"; "seed(95564837)"]
+["becomePlayer(56075a98)"; "addSeed(f6fc8160)"; "guessSeed(bced9cfd)"]
+["becomePlayer(56075a98)"; "addSeed(f6fc8160)"; "getLength(be1c766b)"]
+["becomePlayer(56075a98)"; "addSeed(f6fc8160)"; "addSeed(f6fc8160)"]
+["DranMe(2a8de0ca)"; "winPrize(b11cc099)"]
+["DranMe(2a8de0ca)"; "setSecret(3b4dbf8b)"; "secret(d1efd30d)"]
+["DranMe(2a8de0ca)"; "setSecret(3b4dbf8b)"; "checkSecret(2fdfd2ae)"]
+["DranMe(2a8de0ca)"; "owner(8da5cb5b)"]
+["DranMe(2a8de0ca)"; "manipulateSecret(59eca3e2)"; "winner(dfbf53ae)"]
+["DranMe(2a8de0ca)"; "manipulateSecret(59eca3e2)"; "manipulateSecret(59eca3e2)"]
+["DranMe(2a8de0ca)"; "manipulateSecret(59eca3e2)"; "claimPrize(70740ac9)"]
+["DranMe(2a8de0ca)"; "DranMe(2a8de0ca)"]
+["setSeed(1d7915ad)"; "seed(95564837)"]
+["setSeed(1d7915ad)"; "guessSeed(bced9cfd)"]
+[00:00:00:00] Start main fuzzing phase
+[00:00:00:01] [*] Save new seed id-00000_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] Tx#2 found AssertionFailure at e16
+[00:00:00:01] [*] Save bug seed id-00000-AF_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: players(f71d96cb), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00001_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: players(f71d96cb), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00002_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00003_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: guessSeed(bced9cfd), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00004_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: getPlayerCount(c2e52206), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00005_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: checkSecret(2fdfd2ae), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00006_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: callSecondTarget(1d263b53), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00007_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: callFirstTarget(066d4701), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00008_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00009_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 00000000000000003F0000002000000000000000000000000000000000000000
+( => TX 2 <= ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 000000000000000000000000E800000000000000000000000000000000000000
+          Arg2 : uint256
+                 00000000000000000000000000008F0000000000000000000000000000000000
+(    TX 3    ) Function: owner(8da5cb5b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00010_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000AA0000000000000000000000
+(    TX 2    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: DranMe(2a8de0ca), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00011_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: firstTarget(f5db9820), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: setSeed(1d7915ad), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000D00000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 8000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 3FFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7FFFFFFFFFFF
+(    TX 3    ) Function: fallback, From: NormalUser1, UseAgent: false
+          Value : uint256
+                 4000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00012_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 7FFFFFFFFB21FFFFFFFFFFFFFFFBFFFFDFFFFFFFFF92FFFFFFFFFFFFFFFFFFFF
+(    TX 2    ) Function: setSeed(1d7915ad), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: seed(95564837), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 4 <= ) Function: firstTarget(f5db9820), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 040000000000000000000000000000000000000000000000000000000000BD00
+          Arg2 : uint256
+                 01000000000000003F0000000000100000000000000000DF0000000000000000
+(    TX 6    ) Function: getLength(be1c766b), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 7    ) Function: claimPrize(70740ac9), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00013_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000000000000000000000F4000000000000
+(    TX 2    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] Tx#1 found AssertionFailure at 868
+[00:00:00:01] [*] Save bug seed id-00001-AF_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: balance(47bb89f0), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 3FFF3AFFFFFFFFFFFFFFFFFFFFFF03FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+[00:00:00:01] [*] Save new seed id-00014_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: balance(47bb89f0), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 3FFF3AFFFFFFFFFFFFFFFFFFFFFF03FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+[00:00:00:01] [*] Save new seed id-00015_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: callFirstTarget(066d4701), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 00000000000000750000000000FE000001000000000000000000000000000040
+(    TX 2    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: true
+          Value : uint256
+                 800000000000000000000000000000000000000000000000FD00000000000001
+(    TX 3    ) Function: callSecondTarget(1d263b53), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 000000000000000000001D0000000005000000BF0000FD000000000000000000
+(    TX 4    ) Function: checkSecret(2fdfd2ae), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: getLength(be1c766b), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: fallback, From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 7    ) Function: callSecondTarget(1d263b53), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00016_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: secondTarget(9e3b9dc1), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: checkSecret(2fdfd2ae), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 400000000000000000000000000000EE00040000000000000000000000000000
+(    TX 3    ) Function: setSeed(1d7915ad), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 8000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000E00000000000000003180000000000000
+          Arg2 : uint256
+                 0000000020000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: callFirstTarget(066d4701), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 6    ) Function: claimPrize(70740ac9), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] Tx#3 found AssertionFailure at b88
+[00:00:00:01] [*] Save bug seed id-00002-AF_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 4000000000000000000000000000000000000000E50000000000000000000000
+          Arg1 : uint256
+                 4000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000800000000000000000000000E10000
+( => TX 2 <= ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 00000000000A0000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000FD0000000000000000000000000000000000000000000000
+(    TX 3    ) Function: seed(95564837), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000F50000000000000000000000000000000000000000
+(    TX 4    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 9AFFFF3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+[00:00:00:01] [*] Save new seed id-00017_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 4000000000000000000000000000000000000000E50000000000000000000000
+          Arg1 : uint256
+                 4000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000800000000000000000000000E10000
+( => TX 2 <= ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 00000000000A0000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000FD0000000000000000000000000000000000000000000000
+(    TX 3    ) Function: seed(95564837), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000F50000000000000000000000000000000000000000
+(    TX 4    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 9AFFFF3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+[00:00:00:01] [*] Save new seed id-00018_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 8000000000000000000000000000000000000000000000000000000000000001
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: secret(d1efd30d), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: claimPrize(70740ac9), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 800000000000000000000000F000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00019_00001: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000057000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: winPrize(b11cc099), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:01] [*] Save new seed id-00020_00001: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: balance(47bb89f0), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000040000000000000000000000000000008100
+(    TX 2    ) Function: secondTarget(9e3b9dc1), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: guessSeed(bced9cfd), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: firstTarget(f5db9820), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000080000000000000010000
+          Arg1 : uint256
+                 0000000000000000001C00000000150000000000000000000000000000000000
+          Arg2 : uint256
+                 000000003F000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: DranMe(2a8de0ca), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 000000000000000000000000DA00000000000000000000000000000000810001
+(    TX 7    ) Function: setSecret(3b4dbf8b), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 8    ) Function: guessSeed(bced9cfd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 8000000000000000000000000002000000000000000000000000000000000001
+          Arg1 : uint256
+                 0000000000000000000000000000000000450000000000000000000000000000
+(    TX 9    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] [*] Save new seed id-00021_00002: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000F500000000000000
+(    TX 2    ) Function: players(f71d96cb), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] [*] Save new seed id-00022_00002: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: getPrize(c34f6b0d), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: players(f71d96cb), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] [*] Save new seed id-00023_00002: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000A000000000000000000001000000000000000410000000001
+(    TX 2    ) Function: callFirstTarget(066d4701), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 3    ) Function: winPrize(b11cc099), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 4 <= ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 4000FF0000000000000000000000000000000000000000000000000000000001
+          Arg1 : uint256
+                 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 5    ) Function: addSeed(f6fc8160), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000400000000000000000
+(    TX 6    ) Function: winner(dfbf53ae), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] Tx#2 found ReentrancyMythril at c6a
+[00:00:00:02] [*] Save bug seed id-00003-RE_myth_00002: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: DranMe(2a8de0ca), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: winPrize(b11cc099), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] [*] Save new seed id-00024_00002: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: DranMe(2a8de0ca), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: winPrize(b11cc099), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] [*] Save new seed id-00025_00002: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: DranMe(2a8de0ca), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: setSecret(3b4dbf8b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: checkSecret(2fdfd2ae), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:02] [*] Save new seed id-00026_00002: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+(    TX 2    ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:04] [*] Save new seed id-00027_00004: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000810000000000000000
+(    TX 2    ) Function: callSecondTarget(1d263b53), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:05] [*] Save new seed id-00028_00005: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000200000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 4000000000000000000000000000000000000000000000000000000000000001
+(    TX 3    ) Function: seed(95564837), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000004000000000000000
+
+[00:00:00:06] [*] Save new seed id-00029_00006: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000E600000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:07] [*] Save new seed id-00030_00007: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000400000000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: addSeed(f6fc8160), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: callFirstTarget(066d4701), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: addSeed(f6fc8160), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000800000000000000000000004D00000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: firstTarget(f5db9820), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:07] Tx#2 found MishandledException at c6a
+[00:00:00:07] Tx#2 found MishandledExceptionMythril at c6a
+[00:00:00:07] Tx#2 found MishandledExceptionManticore at c6a
+[00:00:00:07] [*] Save bug seed id-00004-ME-ME_mant-ME_myth_00007: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: DranMe(2a8de0ca), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000000000007F000000
+(    TX 2    ) Function: winPrize(b11cc099), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:13] Tx#2 found AssertionFailure at 717
+[00:00:00:13] [*] Save bug seed id-00005-AF_00013: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000000000000000000000F4000000000000
+( => TX 2 <= ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000081
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:13] [*] Save new seed id-00031_00013: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000000000000000000000F4000000000000
+( => TX 2 <= ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000081
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:21] [*] Save new seed id-00032_00021: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+( => TX 2 <= ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:00:22] Tx#2 found MishandledException at 6a9
+[00:00:00:22] Tx#2 found MishandledExceptionMythril at 6a9
+[00:00:00:22] Tx#2 found MishandledExceptionManticore at 6a9
+[00:00:00:22] [*] Save bug seed id-00006-ME-ME_mant-ME_myth_00022: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000810000000000000000
+( => TX 2 <= ) Function: callSecondTarget(1d263b53), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:00:22] [*] Save new seed id-00033_00022: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000810000000000000000
+( => TX 2 <= ) Function: callSecondTarget(1d263b53), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:00:24] [*] Save new seed id-00034_00024: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+(    TX 2    ) Function: guessSeed(bced9cfd), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:24] Tx#4 found MishandledException at 5ea
+[00:00:00:24] Tx#4 found MishandledExceptionMythril at 5ea
+[00:00:00:24] Tx#4 found MishandledExceptionManticore at 5ea
+[00:00:00:24] [*] Save bug seed id-00007-ME-ME_mant-ME_myth_00024: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000400000000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: addSeed(f6fc8160), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 4 <= ) Function: callFirstTarget(066d4701), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+(    TX 5    ) Function: addSeed(f6fc8160), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000800000000000000000000004D00000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: firstTarget(f5db9820), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:24] [*] Save new seed id-00035_00024: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000400000000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: addSeed(f6fc8160), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 4 <= ) Function: callFirstTarget(066d4701), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+(    TX 5    ) Function: addSeed(f6fc8160), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000800000000000000000000004D00000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: firstTarget(f5db9820), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:31] [*] Save new seed id-00036_00031: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: firstTarget(f5db9820), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: setSeed(1d7915ad), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000010000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 000000FE00000000000041000000140041000000000000000023000000000000
+(    TX 3    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 00000000000000000000000000190000000000000000BB000000000000000000
+(    TX 4    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000800000040000000001
+(    TX 5    ) Function: getLength(be1c766b), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: checkSecret(2fdfd2ae), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000001300000000000000
+
+[00:00:00:46] Tx#4 found AssertionFailure at cda
+[00:00:00:46] [*] Save bug seed id-00008-AF_00046: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000E600000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: guessSeed(bced9cfd), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:46] [*] Save new seed id-00037_00046: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000E600000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: guessSeed(bced9cfd), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:48] [*] Save new seed id-00038_00048: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000100000000000000
+(    TX 2    ) Function: guessSeed(bced9cfd), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000021000000
+          Arg1 : uint256
+                 000000000000000000010000000000DE00000000000000000000000000000000
+(    TX 3    ) Function: addSeed(f6fc8160), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 4000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: checkSecret(2fdfd2ae), From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 5 <= ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:52] Tx#7 found AssertionFailure at d0b
+[00:00:00:52] [*] Save bug seed id-00009-AF_00052: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000EF000000000000000000000000000000
+          Arg1 : uint256
+                 1000000000000000000000000000000000000000000000000000000000000000
+( => TX 2 <= ) Function: DranMe(2a8de0ca), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000180000000000000000000000000000010000000000000000000000
+(    TX 3    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000FF0004000000000000
+(    TX 4    ) Function: secondTarget(9e3b9dc1), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: setSeed(1d7915ad), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 7    ) Function: guessSeed(bced9cfd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000800000
+          Arg1 : uint256
+                 00C3200000000000000000000000000000000000000000000000000000000000
+
+[00:00:00:52] [*] Save new seed id-00039_00052: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000EF000000000000000000000000000000
+          Arg1 : uint256
+                 1000000000000000000000000000000000000000000000000000000000000000
+( => TX 2 <= ) Function: DranMe(2a8de0ca), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000180000000000000000000000000000010000000000000000000000
+(    TX 3    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000FF0004000000000000
+(    TX 4    ) Function: secondTarget(9e3b9dc1), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: setSeed(1d7915ad), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 7    ) Function: guessSeed(bced9cfd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000800000
+          Arg1 : uint256
+                 00C3200000000000000000000000000000000000000000000000000000000000
+
+[00:00:01:18] Tx#8 found IntegerBugMythril at d02
+[00:00:01:18] Tx#8 found IntegerBugManticore at d02
+[00:00:01:18] [*] Save bug seed id-00010-IB_mant-IB_myth_00078: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 1 <= ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000EF000000000000000800000000000000
+          Arg1 : uint256
+                 1000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: DranMe(2a8de0ca), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000180000000000000000000000000000010000000000000000000000
+(    TX 3    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000FF0001000000000000
+(    TX 4    ) Function: players(f71d96cb), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: secondTarget(9e3b9dc1), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 7    ) Function: setSeed(1d7915ad), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 8000000000000000000000000000000000000000000000000000000000000001
+(    TX 8    ) Function: guessSeed(bced9cfd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000800000
+          Arg1 : uint256
+                 00C3200000000000000000000000000000000000000000000000000000000000
+
+[00:00:03:21] Tx#3 found IntegerBugSFuzz at ef8
+[00:00:03:21] Tx#3 found IntegerBugMythril at ef8
+[00:00:03:21] [*] Save bug seed id-00011-IB_myth-IB_sfuzz_00201: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000E600000000000000
+( => TX 2 <= ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 8700000000000000000000000000000000000000000000000000000000000081
+(    TX 3    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 1000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 5    ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:04:31] Tx#3 found EtherLeak at c6a
+[00:00:04:31] [*] Save bug seed id-00012-EL_00271: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 00000000000000000000000000000000000000000000000000F4000000000000
+(    TX 2    ) Function: DranMe(2a8de0ca), From: NormalUser1, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: winPrize(b11cc099), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: setSeed(1d7915ad), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg2 : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:07:17] [*] Save new seed id-00040_00437: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+( => TX 2 <= ) Function: DranMe(2a8de0ca), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000007F00000000000000000000000000000000000000
+(    TX 3    ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:07:38] Tx#3 found BlockstateDependencySFuzz at e4e
+[00:00:07:38] Tx#3 found BlockstateDependencyMythril at e8b
+[00:00:07:38] Tx#3 found BlockstateDependencyManticore at e4e
+[00:00:07:38] Tx#3 found BlockstateDependencyManticore at e50
+[00:00:07:38] [*] Save bug seed id-00013-BD_mant-BD_myth-BD_sfuzz_00458: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+(    TX 2    ) Function: DranMe(2a8de0ca), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:07:38] [*] Save new seed id-00041_00458: 
+( => TX 0 <= ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+(    TX 2    ) Function: DranMe(2a8de0ca), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:07:50] [*] Save new seed id-00042_00470: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000A90000000000000000
+(    TX 2    ) Function: DranMe(2a8de0ca), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 3 <= ) Function: manipulateSecret(59eca3e2), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000007F00000000000000
+
+[00:00:08:56] [*] Save new seed id-00043_00536: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: callFirstTarget(066d4701), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 2    ) Function: setSeed(1d7915ad), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 000000000000000000000000000000000000000000000000000000000E000000
+          Arg2 : uint256
+                 000000FD00000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: firstTarget(f5db9820), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: winPrize(b11cc099), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000002000000000000000000000000000000000000000
+(    TX 5    ) Function: addSeed(f6fc8160), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 002000000000000000A500000000000000000000000000FA0000000000FF0000
+          Arg1 : uint256
+                 000000000000000000000000000000000000000000D300000000000000000000
+(    TX 6    ) Function: callFirstTarget(066d4701), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 000000000000000001000000000000EB00000000000000000000000000000001
+(    TX 7    ) Function: DranMe(2a8de0ca), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 8    ) Function: winner(dfbf53ae), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 9 <= ) Function: setSecret(3b4dbf8b), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000000000400000000000080000
+(    TX 10    ) Function: becomePlayer(56075a98), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000010000160000000000
+(    TX 11    ) Function: claimPrize(70740ac9), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+(    TX 12    ) Function: checkSecret(2fdfd2ae), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000400000000000080000
+(    TX 13    ) Function: addSeed(f6fc8160), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 00E1000200000000000000000000000000001E00000000000017000000000000
+          Arg1 : uint256
+                 0000000000000000000000000000000000000000003F00000000000000000001
+(    TX 14    ) Function: secret(d1efd30d), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 15    ) Function: checkSecret(2fdfd2ae), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 8000001A00000000000000000000000000000000000000000000000000000001
+(    TX 16    ) Function: getPrize(c34f6b0d), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:10:07] Tx#6 found ReentrancySFuzz at c6a
+[00:00:10:07] [*] Save bug seed id-00014-RE_sfuzz_00607: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000040E600000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 1000000000000000000000000000000000000000000000000000000000000000
+(    TX 3    ) Function: DranMe(2a8de0ca), From: NormalUser2, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 4    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000FF0004000000000000
+(    TX 5    ) Function: guessSeed(bced9cfd), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000800000
+          Arg1 : uint256
+                 0000200000000000000000000000000000000000000000000000000000000000
+(    TX 6    ) Function: winPrize(b11cc099), From: NormalUser2, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+( => TX 7 <= ) Function: getLength(be1c766b), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 8    ) Function: secondTarget(9e3b9dc1), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+
+[00:00:17:02] Tx#5 found IntegerBugSFuzz at b93
+[00:00:17:02] [*] Save bug seed id-00015-IB_sfuzz_01022: 
+(    TX 0    ) Function: constructor, From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+(    TX 1    ) Function: becomePlayer(56075a98), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 000000000000000000000000000000000000000000000000E600000000000000
+(    TX 2    ) Function: addSeed(f6fc8160), From: NormalUser3, UseAgent: false
+          Value : uint256
+                 0000000000000000000000010000000000000000000000000000000000000000
+          Arg1 : uint256
+                 0000000000003F00000000000000000000000000000000000000000000000000
+( => TX 3 <= ) Function: addSeed(f6fc8160), From: TargetOwner, UseAgent: false
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 8000000000410000000000000000000000000000000000000015000000000000
+(    TX 4    ) Function: becomePlayer(56075a98), From: NormalUser1, UseAgent: false
+          Value : uint256
+                 00000000000000000000000000000000000000000000003F0000000000000000
+(    TX 5    ) Function: seed(95564837), From: TargetOwner, UseAgent: true
+          Value : uint256
+                 0000000000000000000000000000000000000000000000000000000000000000
+          Arg1 : uint256
+                 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+Fuzzing timeout expired.
+[00:01:00:00] ===== Statistics =====
+[00:01:00:00] Total Executions: 799131
+[00:01:00:00] Deployment failures: 0
+[00:01:00:00] Test Cases: 44
+[00:01:00:00] Covered Edges: 180
+[00:01:00:00] Covered Instructions: 1925
+[00:01:00:00] Covered Def-Use Chains: 57
+[00:01:00:00] Found Bugs:
+[00:01:00:00]   Assertion Failure: 6
+[00:01:00:00]   Arbitrary Write: 0
+[00:01:00:00]   Block state Dependency: 0
+[00:01:00:00]   Control Hijack: 0
+[00:01:00:00]   Ether Leak: 1
+[00:01:00:00]   Integer Bug: 0
+[00:01:00:00]   Mishandled Exception: 3
+[00:01:00:00]   Multiple Send: 0
+[00:01:00:00]   Reentrancy: 0
+[00:01:00:00]   Suicidal Contract: 0
+[00:01:00:00]   Transaction Origin Use: 0
+[00:01:00:00]   Freezing Ether: 0
+[00:01:00:00]   Requirement Violation: 0
+[00:01:00:00] Done, clean up and exit...

@@ -1,0 +1,18 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/EBU.sol:19:13: Warning: Return value of low-level calls not used.
+            caddress.call(id,from,_tos[i],v[i]*1000000000000000000);
+            ^-----------------------------------------------------^
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz EBU
+./fuzzMe: line 5:    34 Killed                  ./fuzzer --file contracts/EBU.sol.json --source contracts/EBU.sol --name EBU --assets assets/ --duration 3600 --mode 0 --reporter 1 --attacker ReentrancyAttacker --tcdir output/ --vulnlog output/log.txt

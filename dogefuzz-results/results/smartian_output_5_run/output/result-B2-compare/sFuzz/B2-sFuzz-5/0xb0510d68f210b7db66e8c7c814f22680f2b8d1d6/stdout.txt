@@ -1,0 +1,36 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/Splitter.sol:48:38: Warning: This declaration shadows an existing declaration.
+	function newPuppet() public returns(address newPuppet){
+	                                    ^---------------^
+contracts/Splitter.sol:48:2: The shadowed declaration is here:
+	function newPuppet() public returns(address newPuppet){
+ ^ (Relevant source part starts here and spans across multiple lines).
+
+contracts/Splitter.sol:69:9: Warning: Return value of low-level calls not used.
+        extra[0].call.value(_share).gas(800000)();
+        ^---------------------------------------^
+contracts/Splitter.sol:71:9: Warning: Return value of low-level calls not used.
+        extra[1].call.value(_share).gas(800000)();
+        ^---------------------------------------^
+contracts/Splitter.sol:73:9: Warning: Return value of low-level calls not used.
+        extra[2].call.value(_share).gas(800000)();
+        ^---------------------------------------^
+contracts/Splitter.sol:75:9: Warning: Return value of low-level calls not used.
+        extra[3].call.value(_share).gas(800000)();
+        ^---------------------------------------^
+contracts/Splitter.sol:102:4: Warning: Return value of low-level calls not used.
+			target[0].call.value(msg.value).gas(600000)();
+			^-------------------------------------------^
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz Splitter

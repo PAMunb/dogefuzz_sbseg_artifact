@@ -1,0 +1,3 @@
+[00:00:00:01] Found IntegerBug at 1e
+[00:00:00:05] Found BlockstateDependency at 0
+[00:00:00:05] Found BlockstateDependency at 0

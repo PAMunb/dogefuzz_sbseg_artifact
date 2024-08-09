@@ -1,0 +1,50 @@
+/home/test/tools/ilf/venv/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+/home/test/tools/ilf/venv/lib/python3.6/site-packages/sklearn/utils/deprecation.py:144: FutureWarning: The sklearn.preprocessing.data module is  deprecated in version 0.22 and will be removed in version 0.24. The corresponding classes / functions should instead be imported from sklearn.preprocessing. Anything that cannot be imported from sklearn.preprocessing is now part of the private API.
+  warnings.warn(message, FutureWarning)
+/home/test/tools/ilf/venv/lib/python3.6/site-packages/sklearn/base.py:318: UserWarning: Trying to unpickle estimator StandardScaler from version 0.20.2 when using version 0.22.1. This might lead to breaking code or invalid results. Use at your own risk.
+  UserWarning)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/logging/__init__.py", line 994, in emit
+    msg = self.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 840, in format
+    return fmt.format(record)
+  File "/usr/lib/python3.6/logging/__init__.py", line 577, in format
+    record.message = record.getMessage()
+  File "/usr/lib/python3.6/logging/__init__.py", line 336, in getMessage
+    msg = str(self.msg)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/fuzzers/stat.py", line 140, in __str__
+    return json.dumps(self.to_json())
+  File "/home/test/tools/ilf/go/src/ilf/ilf/fuzzers/stat.py", line 101, in to_json
+    all_insns = len(self.all_pcs_dict[name])
+KeyError: 'GuessTheRandomNumberChallenge'
+Call stack:
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 92, in <module>
+    main()
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 88, in main
+    environment.fuzz_loop(policy, obs)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/fuzzers/environment.py", line 45, in fuzz_loop
+    LOG.info(obs.stat)
+Message: <ilf.fuzzers.stat.Stat object at 0x7fdf0485a6d8>
+Arguments: ()
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 92, in <module>
+    main()
+  File "/home/test/tools/ilf/go/src/ilf/ilf/__main__.py", line 88, in main
+    environment.fuzz_loop(policy, obs)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/fuzzers/environment.py", line 47, in fuzz_loop
+    self.init_txs(policy, obs)
+  File "/home/test/tools/ilf/go/src/ilf/ilf/fuzzers/environment.py", line 95, in init_txs
+    contract = policy.contract_manager[name]
+  File "/home/test/tools/ilf/go/src/ilf/ilf/ethereum/evm/contract.py", line 36, in __getitem__
+    return self.contract_dict[name]
+KeyError: 'GuessTheRandomNumberChallenge'

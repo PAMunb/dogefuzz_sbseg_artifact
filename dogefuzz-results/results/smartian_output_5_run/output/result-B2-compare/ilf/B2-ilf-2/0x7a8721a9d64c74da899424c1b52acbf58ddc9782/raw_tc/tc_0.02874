@@ -1,0 +1,1 @@
+{"contract": "PrivateDeposit", "call_address": "0x724f259aee54e29b78536457a05bb992c771d252", "method": "CashOut", "arguments": ["0"], "amount": 0, "sender": 4, "timestamp": 1704199087, "number": 1}

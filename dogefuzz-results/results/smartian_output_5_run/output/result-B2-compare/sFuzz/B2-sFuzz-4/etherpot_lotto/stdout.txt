@@ -1,0 +1,125 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/Lotto.sol:50:10: Warning: Use of the "var" keyword is deprecated.
+         var decisionBlockNumber = getDecisionBlockNumber(roundIndex,subpotIndex);
+         ^---------------------^
+contracts/Lotto.sol:56:10: Warning: Use of the "var" keyword is deprecated.
+         var decisionBlockHash = getHashOfBlock(decisionBlockNumber);
+         ^-------------------^
+contracts/Lotto.sol:57:10: Warning: Use of the "var" keyword is deprecated.
+         var winningTicketIndex = decisionBlockHash%rounds[roundIndex].ticketsCount;
+         ^--------------------^
+contracts/Lotto.sol:60:10: Warning: Use of the "var" keyword is deprecated.
+         var ticketIndex = uint256(0);
+         ^-------------^
+contracts/Lotto.sol:62:14: Warning: Use of the "var" keyword is deprecated.
+         for(var buyerIndex = 0; buyerIndex<rounds[roundIndex].buyers.length; buyerIndex++){
+             ^------------^
+contracts/Lotto.sol:63:14: Warning: Use of the "var" keyword is deprecated.
+             var buyer = rounds[roundIndex].buyers[buyerIndex];
+             ^-------^
+contracts/Lotto.sol:77:10: Warning: Use of the "var" keyword is deprecated.
+         var subpotsCount = rounds[roundIndex].pot/blockReward;
+         ^--------------^
+contracts/Lotto.sol:91:10: Warning: Use of the "var" keyword is deprecated.
+         var subpotsCount = getSubpotsCount(roundIndex);
+         ^--------------^
+contracts/Lotto.sol:96:10: Warning: Use of the "var" keyword is deprecated.
+         var decisionBlockNumber = getDecisionBlockNumber(roundIndex,subpotIndex);
+         ^---------------------^
+contracts/Lotto.sol:105:10: Warning: Use of the "var" keyword is deprecated.
+         var winner = calculateWinner(roundIndex,subpotIndex);
+         ^--------^
+contracts/Lotto.sol:106:10: Warning: Use of the "var" keyword is deprecated.
+         var subpot = getSubpot(roundIndex);
+         ^--------^
+contracts/Lotto.sol:134:10: Warning: Use of the "var" keyword is deprecated.
+         var roundIndex = getRoundIndex();
+         ^------------^
+contracts/Lotto.sol:135:10: Warning: Use of the "var" keyword is deprecated.
+         var value = msg.value-(msg.value%ticketPrice);
+         ^-------^
+contracts/Lotto.sol:145:10: Warning: Use of the "var" keyword is deprecated.
+         var ticketsCount = value/ticketPrice;
+         ^--------------^
+contracts/Lotto.sol:149:14: Warning: Use of the "var" keyword is deprecated.
+             var buyersLength = rounds[roundIndex].buyers.length++;
+             ^--------------^
+contracts/Lotto.sol:62:14: Warning: The type of this variable was inferred as uint8, which can hold values between 0 and 255. This is probably not desired. Use an explicit type to silence this warning.
+         for(var buyerIndex = 0; buyerIndex<rounds[roundIndex].buyers.length; buyerIndex++){
+             ^----------------^
+contracts/Lotto.sol:109:10: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+         winner.send(subpot);
+         ^-----------------^
+contracts/Lotto.sol:141:14: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+             msg.sender.send(msg.value-value);
+             ^------------------------------^
+contracts/Lotto.sol:20:6: Warning: No visibility specified. Defaulting to "public". 
+     function getBlocksPerRound() constant returns(uint){ return blocksPerRound; }
+     ^---------------------------------------------------------------------------^
+contracts/Lotto.sol:21:6: Warning: No visibility specified. Defaulting to "public". 
+     function getTicketPrice() constant returns(uint){ return ticketPrice; }
+     ^---------------------------------------------------------------------^
+contracts/Lotto.sol:34:6: Warning: No visibility specified. Defaulting to "public". 
+     function getRoundIndex() constant returns (uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:40:6: Warning: No visibility specified. Defaulting to "public". 
+     function getIsCashed(uint roundIndex,uint subpotIndex) constant returns (bool){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:47:6: Warning: No visibility specified. Defaulting to "public". 
+     function calculateWinner(uint roundIndex, uint subpotIndex) constant returns(address){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:72:6: Warning: No visibility specified. Defaulting to "public". 
+     function getDecisionBlockNumber(uint roundIndex,uint subpotIndex) constant returns (uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:76:6: Warning: No visibility specified. Defaulting to "public". 
+     function getSubpotsCount(uint roundIndex) constant returns(uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:85:6: Warning: No visibility specified. Defaulting to "public". 
+     function getSubpot(uint roundIndex) constant returns(uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:89:6: Warning: No visibility specified. Defaulting to "public". 
+     function cash(uint roundIndex, uint subpotIndex){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:115:6: Warning: No visibility specified. Defaulting to "public". 
+     function getHashOfBlock(uint blockIndex) constant returns(uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:116:22: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+         return uint(block.blockhash(blockIndex));
+                     ^-------------^
+contracts/Lotto.sol:119:6: Warning: No visibility specified. Defaulting to "public". 
+     function getBuyers(uint roundIndex,address buyer) constant returns (address[]){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:119:41: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+     function getBuyers(uint roundIndex,address buyer) constant returns (address[]){
+                                        ^-----------^
+contracts/Lotto.sol:123:6: Warning: No visibility specified. Defaulting to "public". 
+     function getTicketsCountByBuyer(uint roundIndex,address buyer) constant returns (uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:127:6: Warning: No visibility specified. Defaulting to "public". 
+     function getPot(uint roundIndex) constant returns(uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:131:6: Warning: No visibility specified. Defaulting to "public". 
+     function() payable {
+     ^ (Relevant source part starts here and spans across multiple lines).
+contracts/Lotto.sol:20:6: Warning: Function state mutability can be restricted to pure
+     function getBlocksPerRound() constant returns(uint){ return blocksPerRound; }
+     ^---------------------------------------------------------------------------^
+contracts/Lotto.sol:21:6: Warning: Function state mutability can be restricted to pure
+     function getTicketPrice() constant returns(uint){ return ticketPrice; }
+     ^---------------------------------------------------------------------^
+contracts/Lotto.sol:72:6: Warning: Function state mutability can be restricted to pure
+     function getDecisionBlockNumber(uint roundIndex,uint subpotIndex) constant returns (uint){
+     ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz Lotto

@@ -1,0 +1,92 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/TownCrier.sol:51:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function TownCrier() public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TownCrier.sol:95:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+contracts/TownCrier.sol:102:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+contracts/TownCrier.sol:108:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+contracts/TownCrier.sol:119:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+contracts/TownCrier.sol:198:13: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+            throw;
+            ^---^
+contracts/TownCrier.sol:212:17: Warning: "throw" is deprecated in favour of "revert()", "require()" and "assert()".
+                throw;
+                ^---^
+contracts/TownCrier.sol:67:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Upgrade(newAddr);
+            ^--------------^
+contracts/TownCrier.sol:76:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Reset(GAS_PRICE, MIN_FEE, CANCELLATION_FEE);
+            ^-----------------------------------------^
+contracts/TownCrier.sol:94:51: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            if (!requests[0].requester.call.value(this.balance)()) {
+                                                  ^----------^
+contracts/TownCrier.sol:129:34: Warning: "sha3" has been deprecated in favour of "keccak256"
+            bytes32 paramsHash = sha3(requestType, requestData);
+                                 ^----------------------------^
+contracts/TownCrier.sol:129:34: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+            bytes32 paramsHash = sha3(requestType, requestData);
+                                 ^----------------------------^
+contracts/TownCrier.sol:137:13: Warning: Invoking events without "emit" prefix is deprecated.
+            RequestInfo(requestId, requestType, msg.sender, msg.value, callbackAddr, paramsHash, timestamp, requestData);
+            ^----------------------------------------------------------------------------------------------------------^
+contracts/TownCrier.sol:162:13: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+            SGX_ADDRESS.send(CANCELLATION_FEE);
+            ^--------------------------------^
+contracts/TownCrier.sol:175:13: Warning: Failure condition of 'send' ignored. Consider using 'transfer' instead.
+            SGX_ADDRESS.send(fee);         
+            ^-------------------^
+contracts/TownCrier.sol:180:13: Warning: Return value of low-level calls not used.
+            requests[requestId].requester.call.gas(2300).value(fee)();
+            ^-------------------------------------------------------^
+contracts/TownCrier.sol:185:9: Warning: Invoking events without "emit" prefix is deprecated.
+        DeliverInfo(requestId, fee, tx.gasprice, msg.gas, callbackGas, paramsHash, error, respData); // log the response information
+        ^-----------------------------------------------------------------------------------------^
+contracts/TownCrier.sol:192:9: Warning: Return value of low-level calls not used.
+ ... requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID, requestId, error, respData) ... 
+     ^-----------------------------------------------------------------------------------------------------------------^
+contracts/TownCrier.sol:215:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Cancel(requestId, msg.sender, requests[requestId].requester, requests[requestId].fee, 1);
+            ^--------------------------------------------------------------------------------------^
+contracts/TownCrier.sol:218:13: Warning: Invoking events without "emit" prefix is deprecated.
+            Cancel(requestId, msg.sender, requests[requestId].requester, fee, -1);
+            ^-------------------------------------------------------------------^
+contracts/TownCrier.sol:41:5: Warning: Variable covers a large part of storage and thus makes collisions likely. Either use mappings or dynamic arrays and allow their size to be increased only in small quantities per transaction.
+    Request[2**64] public requests;
+    ^----------------------------^
+contracts/TownCrier.sol:49:5: Warning: No visibility specified. Defaulting to "public". 
+    function () {}
+    ^------------^
+contracts/TownCrier.sol:63:5: Warning: No visibility specified. Defaulting to "public". 
+    function upgrade(address newAddr) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TownCrier.sol:185:50: Warning: "msg.gas" has been deprecated in favor of "gasleft()"
+        DeliverInfo(requestId, fee, tx.gasprice, msg.gas, callbackGas, paramsHash, error, respData); // log the response information
+                                                 ^-----^
+contracts/TownCrier.sol:186:27: Warning: "msg.gas" has been deprecated in favor of "gasleft()"
+        if (callbackGas > msg.gas - 5000) {
+                          ^-----^
+contracts/TownCrier.sol:187:27: Warning: "msg.gas" has been deprecated in favor of "gasleft()"
+            callbackGas = msg.gas - 5000;
+                          ^-----^
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz TownCrier

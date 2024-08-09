@@ -1,0 +1,7 @@
+[00:00:00:00] Found IntegerBug at 1e7c
+[00:00:00:00] Found IntegerBug at 1e96
+[00:00:00:00] Found MishandledException at 0
+[00:00:00:00] Found IntegerBug at 1eff
+[00:00:00:00] Found IntegerBug at 1f19
+[00:00:00:10] Found BlockstateDependency at 0
+[00:00:01:03] Found IntegerBug at 1986

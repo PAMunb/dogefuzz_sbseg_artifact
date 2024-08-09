@@ -1,0 +1,33 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/EtherGet.sol:14:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function EtherGet() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/EtherGet.sol:22:24: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        owner.transfer(this.balance);
+                       ^----------^
+contracts/EtherGet.sol:27:13: Warning: Return value of low-level calls not used.
+            addr.call.value(0 wei)();
+            ^----------------------^
+contracts/EtherGet.sol:9:5: Warning: No visibility specified. Defaulting to "public". 
+    function transfer(address _to, uint _value) returns (bool success);
+    ^-----------------------------------------------------------------^
+contracts/EtherGet.sol:10:5: Warning: No visibility specified. Defaulting to "public". 
+    function balanceOf(address _owner) constant returns (uint balance);
+    ^-----------------------------------------------------------------^
+contracts/EtherGet.sol:14:5: Warning: No visibility specified. Defaulting to "public". 
+    function EtherGet() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz EtherGet
+No valid jumpi

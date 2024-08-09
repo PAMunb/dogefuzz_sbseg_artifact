@@ -1,0 +1,7 @@
+00m: 0 Edges, 0 Instrs
+01m: 288 Edges, 5235 Instrs
+02m: 290 Edges, 5240 Instrs
+03m: 291 Edges, 5243 Instrs
+04m: 294 Edges, 5292 Instrs
+05m: 294 Edges, 5292 Instrs
+06m: 303 Edges, 5392 Instrs

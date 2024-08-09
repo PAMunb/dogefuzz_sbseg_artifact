@@ -1,0 +1,1 @@
+{"contract": "SimpleWallet", "call_address": "0x724f259aee54e29b78536457a05bb992c771d252", "method": "sendMoney", "arguments": ["0x2fe5e54e71755a9719fd5b06c8697cefa1283165", "0", ["230", "241", "194", "107", "48", "249", "14", "199"]], "amount": 0, "sender": 4, "timestamp": 1670554448, "number": 1}

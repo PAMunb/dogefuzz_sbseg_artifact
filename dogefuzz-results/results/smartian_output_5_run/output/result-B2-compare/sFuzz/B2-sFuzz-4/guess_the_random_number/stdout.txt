@@ -1,0 +1,23 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/GuessTheRandomNumberChallenge.sol:12:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function GuessTheRandomNumberChallenge() public payable {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/GuessTheRandomNumberChallenge.sol:15:24: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        answer = uint8(keccak256(block.blockhash(block.number - 1), now));
+                       ^-----------------------------------------------^
+contracts/GuessTheRandomNumberChallenge.sol:15:34: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+        answer = uint8(keccak256(block.blockhash(block.number - 1), now));
+                                 ^-------------^
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz GuessTheRandomNumberChallenge

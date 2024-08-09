@@ -1,0 +1,12 @@
+00m: 0 Edges, 0 Instrs
+01m: 50 Edges, 558 Instrs
+02m: 50 Edges, 558 Instrs
+03m: 50 Edges, 558 Instrs
+04m: 50 Edges, 558 Instrs
+05m: 50 Edges, 558 Instrs
+06m: 50 Edges, 558 Instrs
+07m: 50 Edges, 558 Instrs
+08m: 50 Edges, 558 Instrs
+09m: 50 Edges, 558 Instrs
+10m: 50 Edges, 558 Instrs
+11m: 51 Edges, 558 Instrs

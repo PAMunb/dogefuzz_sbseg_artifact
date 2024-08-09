@@ -1,0 +1,26 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/TokenBank.sol:44:27: Warning: "sha3" has been deprecated in favour of "keccak256"
+        token.call(bytes4(sha3("transfer(address,uint256)")),to,amount); 
+                          ^-------------------------------^
+contracts/TokenBank.sol:44:9: Warning: Return value of low-level calls not used.
+        token.call(bytes4(sha3("transfer(address,uint256)")),to,amount); 
+        ^-------------------------------------------------------------^
+contracts/TokenBank.sol:61:5: Warning: No visibility specified. Defaulting to "public". 
+    function()
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/TokenBank.sol:67:5: Warning: No visibility specified. Defaulting to "public". 
+    function Deposit() 
+    ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz TokenBank

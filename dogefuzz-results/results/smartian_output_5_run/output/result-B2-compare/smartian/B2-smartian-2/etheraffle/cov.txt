@@ -1,0 +1,11 @@
+00m: 0 Edges, 0 Instrs
+01m: 114 Edges, 1688 Instrs
+02m: 125 Edges, 1931 Instrs
+03m: 125 Edges, 1931 Instrs
+04m: 125 Edges, 1931 Instrs
+05m: 125 Edges, 1931 Instrs
+06m: 125 Edges, 1931 Instrs
+07m: 125 Edges, 1931 Instrs
+08m: 125 Edges, 1931 Instrs
+09m: 125 Edges, 1931 Instrs
+10m: 126 Edges, 1938 Instrs

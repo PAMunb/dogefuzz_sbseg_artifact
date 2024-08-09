@@ -1,0 +1,167 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+contracts/SmartBillions.sol:85:5: Warning: Use of the "var" keyword is deprecated.
+    var _allowance = allowed[_from][msg.sender];
+    ^------------^
+contracts/SmartBillions.sol:182:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function SmartBillions() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:57:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, owner, _value);
+        ^---------------------------------^
+contracts/SmartBillions.sol:62:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender, _to, _value);
+        ^-------------------------------^
+contracts/SmartBillions.sol:91:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Transfer(_from, _to, _value);
+    ^--------------------------^
+contracts/SmartBillions.sol:102:5: Warning: Invoking events without "emit" prefix is deprecated.
+    Approval(msg.sender, _spender, _value);
+    ^------------------------------------^
+contracts/SmartBillions.sol:318:32: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        require(_amount > 0 && this.balance >= (investBalance * 9 / 10) + walletBalance + _amount);
+                               ^----------^
+contracts/SmartBillions.sol:320:33: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+            require((_amount <= this.balance / 400) && coldStoreLast + 4 * 60 * 24 * 7 <= block.number);
+                                ^----------^
+contracts/SmartBillions.sol:370:23: Warning: Using contract member "balance" inherited from the address type is deprecated. Convert the contract to "address" type to access the member, for example use "address(contract).balance" instead.
+        uint maxpay = this.balance / 2;
+                      ^----------^
+contracts/SmartBillions.sol:427:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(address(0),msg.sender,senderBalance); // for etherscan
+        ^-------------------------------------------^
+contracts/SmartBillions.sol:428:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(address(0),owner,ownerBalance); // for etherscan
+        ^-------------------------------------^
+contracts/SmartBillions.sol:429:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(address(0),animator,animatorBalance); // for etherscan
+        ^-------------------------------------------^
+contracts/SmartBillions.sol:430:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogInvestment(msg.sender,_partner,investing);
+        ^------------------------------------------^
+contracts/SmartBillions.sol:440:9: Warning: Invoking events without "emit" prefix is deprecated.
+        Transfer(msg.sender,address(0),balances[msg.sender]); // for etherscan
+        ^--------------------------------------------------^
+contracts/SmartBillions.sol:477:9: Warning: Invoking events without "emit" prefix is deprecated.
+        LogDividend(_who,balance,last);
+        ^----------------------------^
+contracts/SmartBillions.sol:552:13: Warning: Invoking events without "emit" prefix is deprecated.
+            LogLate(msg.sender,player.blockNum,block.number);
+            ^----------------------------------------------^
+contracts/SmartBillions.sol:574:17: Warning: Invoking events without "emit" prefix is deprecated.
+                LogLate(msg.sender,player.blockNum,block.number);
+                ^----------------------------------------------^
+contracts/SmartBillions.sol:581:13: Warning: Invoking events without "emit" prefix is deprecated.
+            LogWin(msg.sender,uint(player.betHash),uint(hash),prize);
+            ^------------------------------------------------------^
+contracts/SmartBillions.sol:584:17: Warning: Invoking events without "emit" prefix is deprecated.
+                LogRecordWin(msg.sender,prize);
+                ^----------------------------^
+contracts/SmartBillions.sol:589:13: Warning: Invoking events without "emit" prefix is deprecated.
+            LogLoss(msg.sender,uint(player.betHash),uint(hash));
+            ^-------------------------------------------------^
+contracts/SmartBillions.sol:618:32: Warning: "sha3" has been deprecated in favour of "keccak256"
+        return playSystem(uint(sha3(msg.sender,block.number)), address(0));
+                               ^---------------------------^
+contracts/SmartBillions.sol:618:32: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        return playSystem(uint(sha3(msg.sender,block.number)), address(0));
+                               ^---------------------------^
+contracts/SmartBillions.sol:626:32: Warning: "sha3" has been deprecated in favour of "keccak256"
+        return playSystem(uint(sha3(msg.sender,block.number)), _partner);
+                               ^---------------------------^
+contracts/SmartBillions.sol:626:32: Warning: This function only accepts a single "bytes" argument. Please use "abi.encodePacked(...)" or a similar function to encode the data.
+        return playSystem(uint(sha3(msg.sender,block.number)), _partner);
+                               ^---------------------------^
+contracts/SmartBillions.sol:660:13: Warning: Invoking events without "emit" prefix is deprecated.
+            LogBet(msg.sender,uint(bethash),hashNext,msg.value);
+            ^-------------------------------------------------^
+contracts/SmartBillions.sol:25:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address who) constant returns (uint);
+  ^------------------------------------------------------^
+contracts/SmartBillions.sol:26:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address to, uint value);
+  ^----------------------------------------^
+contracts/SmartBillions.sol:32:3: Warning: No visibility specified. Defaulting to "public". 
+  function allowance(address owner, address spender) constant returns (uint);
+  ^-------------------------------------------------------------------------^
+contracts/SmartBillions.sol:33:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferFrom(address from, address to, uint value);
+  ^----------------------------------------------------------^
+contracts/SmartBillions.sol:34:3: Warning: No visibility specified. Defaulting to "public". 
+  function approve(address spender, uint value);
+  ^--------------------------------------------^
+contracts/SmartBillions.sol:51:3: Warning: No visibility specified. Defaulting to "public". 
+  function transfer(address _to, uint _value) onlyPayloadSize(2 * 32) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:70:3: Warning: No visibility specified. Defaulting to "public". 
+  function balanceOf(address _owner) constant returns (uint balance) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:84:3: Warning: No visibility specified. Defaulting to "public". 
+  function transferFrom(address _from, address _to, uint _value) onlyPayloadSize(3 * 32) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:98:3: Warning: No visibility specified. Defaulting to "public". 
+  function approve(address _spender, uint _value) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:110:3: Warning: No visibility specified. Defaulting to "public". 
+  function allowance(address _owner, address _spender) constant returns (uint remaining) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:182:5: Warning: No visibility specified. Defaulting to "public". 
+    function SmartBillions() {
+    ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:523:43: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            return(betPrize(player,uint24(block.blockhash(player.blockNum))));
+                                          ^-------------^
+contracts/SmartBillions.sol:560:27: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            hash = uint24(block.blockhash(player.blockNum));
+                          ^-------------^
+contracts/SmartBillions.sol:700:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+        return( ( uint(block.blockhash(_lastb  )) & 0xFFFFFF )
+                       ^-------------^
+contracts/SmartBillions.sol:702:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+1)) & 0xFFFFFF ) << 24 )
+                       ^-------------^
+contracts/SmartBillions.sol:704:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+2)) & 0xFFFFFF ) << 48 )
+                       ^-------------^
+contracts/SmartBillions.sol:706:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+3)) & 0xFFFFFF ) << 72 )
+                       ^-------------^
+contracts/SmartBillions.sol:708:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+4)) & 0xFFFFFF ) << 96 )
+                       ^-------------^
+contracts/SmartBillions.sol:710:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+5)) & 0xFFFFFF ) << 120 )
+                       ^-------------^
+contracts/SmartBillions.sol:712:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+6)) & 0xFFFFFF ) << 144 )
+                       ^-------------^
+contracts/SmartBillions.sol:714:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+7)) & 0xFFFFFF ) << 168 )
+                       ^-------------^
+contracts/SmartBillions.sol:716:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+8)) & 0xFFFFFF ) << 192 )
+                       ^-------------^
+contracts/SmartBillions.sol:718:24: Warning: "block.blockhash()" has been deprecated in favor of "blockhash()"
+            | ( ( uint(block.blockhash(_lastb+9)) & 0xFFFFFF ) << 216 )
+                       ^-------------^
+contracts/SmartBillions.sol:10:3: Warning: Function state mutability can be restricted to pure
+  function sub(uint a, uint b) internal returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:14:3: Warning: Function state mutability can be restricted to pure
+  function add(uint a, uint b) internal returns (uint) {
+  ^ (Relevant source part starts here and spans across multiple lines).
+contracts/SmartBillions.sol:482:5: Warning: Function state mutability can be restricted to pure
+    function betPrize(Bet _player, uint24 _hash) constant private returns (uint) { // house fee 13.85%
+    ^ (Relevant source part starts here and spans across multiple lines).
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz SmartBillions

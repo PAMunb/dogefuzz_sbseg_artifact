@@ -1,0 +1,15 @@
+[0;32m> Created "fuzzMe"[0m
+[0;32m> To fuzz contracts:[0m
+  chmod +x fuzzMe
+  ./fuzzMe
+assets/NormalAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+assets/ReentrancyAttacker.sol:8:25: Warning: Return value of low-level calls not used.
+                        msg.sender.call(bytes4(255));
+                        ^--------------------------^
+assets/ReentrancyAttacker.sol:5:7: Warning: No visibility specified. Defaulting to "public". 
+      function() payable {
+      ^ (Relevant source part starts here and spans across multiple lines).
+>> Fuzz PredictTheBlockHashChallenge
+./fuzzMe: line 5:    33 Killed                  ./fuzzer --file contracts/PredictTheBlockHashChallenge.sol.json --source contracts/PredictTheBlockHashChallenge.sol --name PredictTheBlockHashChallenge --assets assets/ --duration 3600 --mode 0 --reporter 1 --attacker ReentrancyAttacker --tcdir output/ --vulnlog output/log.txt
