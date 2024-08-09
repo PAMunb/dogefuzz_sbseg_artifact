@@ -135,7 +135,7 @@ $ python3 ../Smartian-Artifact/scripts/count_b2_alarm.py ./results/smartian_outp
 
 ```
 
-## RQ3: How efficient is DogeFuzz in fuzzing large-scale, real-world Ethereum smart contracts?
+## RQ2: How efficient is DogeFuzz in fuzzing large-scale, real-world Ethereum smart contracts?
 
 To generate the coverage boxplot graph:
 
